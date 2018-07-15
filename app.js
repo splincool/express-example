@@ -23,7 +23,7 @@ app.get('/hello', (req, res) => {
 });
 
 app.post('/hello', (req, res) => {
-  res.render('hello');
+  res.render('hello', {name: req.body.username});
 });
 
 app.listen(3000, () => {
